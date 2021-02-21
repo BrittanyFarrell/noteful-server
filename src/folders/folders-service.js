@@ -25,7 +25,15 @@ const FoldersService = {
   insertFolder(db, folder) {
     console.log('insertFolder knex reahed');
     console.log('folder:', folder);
-    //console.log('database:', db);
+    console.log(' ');
+    console.log(' ');
+    console.log(' ');
+    console.log(' ');
+    console.log('database:', db);
+    console.log(' ');
+    console.log(' ');
+    console.log(' ');
+    console.log(' ');
     return db
       .insert(folder)
       .into('folders')
