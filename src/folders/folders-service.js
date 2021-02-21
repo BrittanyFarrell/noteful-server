@@ -23,19 +23,7 @@ const FoldersService = {
   },
 
   insertFolder(db, folder) {
-    console.log('insertFolder knex reahed');
-    console.log('folder:', folder);
-    console.log(' ');
-    console.log(' ');
-    console.log(' ');
-    console.log(' ');
-    console.log('database:', db.name);
-    console.log(' ');
-    console.log(' ');
-    console.log(' ');
-    console.log(' ');
     return db
-      .then(() => console.log('db connection made'))
       .insert(folder)
       .into('folders')
       .returning('*')
