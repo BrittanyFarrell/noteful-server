@@ -34,14 +34,15 @@ const FoldersService = {
     console.log(' ');
     console.log(' ');
     console.log(' ');
-    return db;
-      // .insert(folder)
-      // .into('folders')
-      // .returning('*')
-      // .then(rows => {
-      //   console.log('row', rows[0]);
-      //   return rows[0];
-      // });
+    return db
+      .then(() => console.log('db connection made'))
+      .insert(folder)
+      .into('folders')
+      .returning('*')
+      .then(rows => {
+        console.log('row', rows[0]);
+        return rows[0];
+      });
   },
 
   serializeFolder(folder) {
