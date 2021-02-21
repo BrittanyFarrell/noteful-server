@@ -7,4 +7,4 @@ const db = knex({
   connection: process.env.DATABASE_URL
 });
 
-console.log(db);
+console.log(db.client.Client_PG.connectionSettings);
