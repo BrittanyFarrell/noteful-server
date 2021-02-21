@@ -13,9 +13,9 @@
     "morgan": "^1.10.0",
     "node": "^15.8.0",
     "pg": "^8.5.1",
-    "uuid": "^8.3.2", 
-    "winston": "^3.3.3", 
-    "xss": "^1.0.8" 
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3",
+    "xss": "^1.0.8"
   },
   "devDependencies": {
     "chai": "^4.3.0",
@@ -27,8 +27,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js", 
-    "migrate": "postgrator --config postgrator-config.js"
+    "dev": "nodemon src/server.js",
+    "migrate": "postgrator --config postgrator-config.js",
+    "migrate:test": "env NODE_ENV=test npm run migrate",
+    "migrate:production": "heroku run npm run migrate"
   },
   "keywords": [],
   "engines": {
