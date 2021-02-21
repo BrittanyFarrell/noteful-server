@@ -17,6 +17,7 @@ foldersRouter
   .post(jsonBodyParser, (req, res, next) => {
     const { name } = req.body;
 
+    console.log('post request reached');
     if (!name) {
       logger.error('Missing \'name\' in request body');
       return res.status(400).json({
