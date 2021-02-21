@@ -23,11 +23,17 @@ const FoldersService = {
   },
 
   insertFolder(db, folder) {
+    console.log('insertFolder knex reahed');
+    console.log('folder:', folder);
+    console.log('database:', db);
     return db
       .insert(folder)
       .into('folders')
       .returning('*')
-      .then(rows => rows[0]);
+      .then(rows => {
+        console.log('row', rows[0]);
+        return rows[0];
+      });
   },
 
   serializeFolder(folder) {
