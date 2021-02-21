@@ -7,15 +7,7 @@ const app = require('./app');
 
 const db = knex({
   client: 'pg',
-  connection: process.env.DATABASE_URL,
-  pool: {
-    min: 2,
-    max: 10
-  },
-  migrations: {
-    tablename: 'knex_migrations',
-    directory: '../migrations'
-  }
+  connection: DATABASE_URL
 });
 app.set('db', db);
   

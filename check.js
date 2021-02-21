@@ -1,4 +1,9 @@
 /* eslint-disable strict */
 require('dotenv').config();
 
-console.log(process.env.DATABASE_URL);
+const db = knex({
+  client: 'pg',
+  connection: process.env.DATABASE_URL
+});
+
+console.log(db);
