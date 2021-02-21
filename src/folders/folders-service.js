@@ -29,7 +29,7 @@ const FoldersService = {
     console.log(' ');
     console.log(' ');
     console.log(' ');
-    console.log('database:', db);
+    console.log('database:', db.name);
     console.log(' ');
     console.log(' ');
     console.log(' ');
