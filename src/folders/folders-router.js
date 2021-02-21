@@ -27,7 +27,6 @@ foldersRouter
 
     FoldersService.insertFolder(req.app.get('db'), { name })
       .then(folder => {
-        
         console.log('insert folder complete, returning new folder');
         res
           .status(201)
