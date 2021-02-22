@@ -28,7 +28,6 @@ const FoldersService = {
       .into('folders')
       .returning('*')
       .then(rows => {
-        console.log('row', rows[0]);
         return rows[0];
       });
   },

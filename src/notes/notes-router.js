@@ -19,7 +19,7 @@ notesRouter
     const newNote = { name, content, folder_id, date_modified };
 
     if (!name || !content || !folder_id || !date_modified ) {
-      logger.error('missing part of request body');
+      logger.error('Missing part of request body');
       return res.status(400).json({
         error: 'Request body must include a name, content, folder_id, and date_modified'
       });
@@ -58,14 +58,26 @@ notesRouter
     const id = req.params.note_id;
     NotesService.deleteById(req.app.get('db'), id)
       .then(note => {
+        if (!id) {
+          logger.error('Missing part of request body');
+          return res
+            .status(404)
+            .json({error: 'Missing part of request body'}); 
+        }
         if (!note) {
           logger.error('note does not exist');
-          return res.status(404).json({error: 'Note doesn\'t exist'});
+          return res
+            .status(404)
+            .json({error: 'Note doesn\'t exist'});
         }
         if (note) {
           logger.info('note successfully deleted');
-          return res.status(204).json({message: 'the note has been deleted'});
+          return res
+            .status(204)
+            .json({message: 'the note has been deleted'});
         }
+
+        res.end();
       })
       .catch(next);
   });
