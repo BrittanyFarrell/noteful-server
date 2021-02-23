@@ -4,4 +4,4 @@ CREATE TABLE notes (
     content TEXT NOT NULL,
     folder_id INTEGER REFERENCES folders(id) ON DELETE CASCADE NOT NULL,
     date_modified TIMESTAMPTZ NOT NULL DEFAULT now() NOT NULL
-)
+);

@@ -1,9 +1,9 @@
 /* eslint-disable strict */
 require('dotenv').config();
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === 'production') {
   const pg = require('pg');
-  pg.defaults.ssl = { rejectUnauthorized: false }
+  pg.defaults.ssl = { rejectUnauthorized: false };
 }
 
 module.exports = {

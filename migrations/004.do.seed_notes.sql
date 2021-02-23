@@ -8,4 +8,4 @@ INSERT INTO notes (name, content, folder_id)
 
     ('poetry', 'Ugh hammock locavore, cornhole cardigan la croix synth before they sold out. Edison bulb taxidermy health goth cardigan, banh mi bicycle rights chartreuse pour-over everyday carry four loko pitchfork before they sold out.', 2),
     ('vehicle', 'Cray scenester tacos church-key, hexagon paleo keytar put a bird on it art party disrupt shoreditch typewriter lumbersexual hella vice.', 2),
-    ('camera', 'Taiyaki kitsch master cleanse woke offal DIY activated charcoal yuccie lomo. Palo santo selvage snackwave, twee single-origin coffee dreamcatcher tbh mixtape gochujang pok pok cray shaman.', 2)
+    ('camera', 'Taiyaki kitsch master cleanse woke offal DIY activated charcoal yuccie lomo. Palo santo selvage snackwave, twee single-origin coffee dreamcatcher tbh mixtape gochujang pok pok cray shaman.', 2);
